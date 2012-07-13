@@ -1,6 +1,6 @@
 #!/usr/bin/php -q
 <?php
-require('Pusher.php');
+require('pusher/Pusher.php');
 
 switch ($argv[1]) {
 	case 'prev': case 'p':
@@ -18,7 +18,7 @@ switch ($argv[1]) {
 	case 'up': case 'u':
 		$event = 'up';
 	break;
-	
+
 	default:
 		$event = $argv[1];
 	break;

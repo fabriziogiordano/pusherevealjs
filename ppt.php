@@ -47,9 +47,9 @@ if($_GET['go']) {
     <meta charset="utf-8">
     <title>Controllo</title>
     <link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="revealjs/css/reset.css">
-    <link rel="stylesheet" href="revealjs/css/main.css">
-    <link rel="stylesheet" href="revealjs/lib/zenburn.css">
+    <link rel="stylesheet" href="js/revealjs/css/reset.css">
+    <link rel="stylesheet" href="js/revealjs/css/main.css">
+    <link rel="stylesheet" href="js/revealjs/lib/zenburn.css">
   </head>
 
   <body>
@@ -92,11 +92,11 @@ if($_GET['go']) {
 
     </div>
 
-    <script src="reveal.min.js"></script>
+    <script src="js/revealjs/reveal.min.js"></script>
 
     <!-- Optional libraries for code syntax highlighting and classList support in IE9 -->
-    <script src="revealjs/lib/highlight.js"></script>
-    <script src="revealjs/lib/classList.js"></script>
+    <script src="js/revealjs/lib/highlight.js"></script>
+    <script src="js/revealjs/lib/classList.js"></script>
 
     <script>
       // Parse the query string into a key/value object
@@ -106,7 +106,7 @@ if($_GET['go']) {
       } );
 
       Reveal.initialize({
-        controls: true,
+        controls: false,
         progress: true,
         history: false,
         mouseWheel: true,

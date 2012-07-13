@@ -4,13 +4,11 @@
     <meta charset="utf-8">
     <title>HTML Enabling Technologies</title>
     <link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="revealjs/css/reset.css">
-    <link rel="stylesheet" href="revealjs/css/main.css">
-
-    <link rel="stylesheet" href="revealjs/lib/zenburn.css">
-
-    <script src="revealjs/underscore.js"></script>
-    <script src="http://js.pusher.com/1.11/pusher.min.js"></script>
+    <link rel="stylesheet" href="js/revealjs/css/reset.css">
+    <link rel="stylesheet" href="js/revealjs/css/main.css">
+    <link rel="stylesheet" href="js/revealjs/lib/zenburn.css">
+    <script src="js/underscore.js"></script>
+    <script src="http://js.pusher.com/1.12/pusher.min.js"></script>
     <script type="text/javascript">
     var pusher = new Pusher('81ce7cb18d5019fbe99c');
 
@@ -141,38 +139,11 @@
 
         </section>
 
-<!--
-        <section>
-          <section data-state="alert">
-            <h2>Global State</h2>
-            <p>
-              Set <code>data-state="something"</code> on a slide and <code>"something"</code>
-              will be added as a class to the document element when the slide is open. This let's you
-              apply broader style changes, like switching the background.
-            </p>
-            <a href="#/7/1" class="image">
-              <img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png">
-            </a>
-          </section>
-          <section data-state="blackout">
-            <h2>"blackout"</h2>
-            <a href="#/7/2" class="image">
-              <img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png">
-            </a>
-          </section>
-          <section data-state="soothe">
-            <h2>"soothe"</h2>
-            <a href="#/7/0" class="image">
-              <img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" style="-webkit-transform: rotate(180deg);">
-            </a>
-          </section>
-        </section>
--->
-
         <section>
           <h1>THE END</h1>
           <h3 class="inverted">BY Fabrizio</h3>
         </section>
+
       </div>
 
       <!-- The navigational controls UI -->
@@ -188,11 +159,11 @@
 
     </div>
 
-    <script src="revealjs/reveal.min.js"></script>
+    <script src="js/revealjs/reveal.min.js"></script>
 
     <!-- Optional libraries for code syntax highlighting and classList support in IE9 -->
-    <script src="revealjs/lib/highlight.js"></script>
-    <script src="revealjs/lib/classList.js"></script>
+    <script src="js/revealjs/lib/highlight.js"></script>
+    <script src="js/revealjs/lib/classList.js"></script>
 
     <script>
       // Parse the query string into a key/value object
