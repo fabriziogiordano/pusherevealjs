@@ -3,11 +3,17 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Enabling Technologies</title>
+    <meta name="description" content="Manage remote presentation.">
+    <meta name="author" content="Fabrizio Giordano">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
     <link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="js/revealjs/css/reset.css">
-    <link rel="stylesheet" href="js/revealjs/css/main.css">
-    <link rel="stylesheet" href="js/revealjs/lib/zenburn.css">
-    <script src="js/underscore.js"></script>
+    <link rel="stylesheet" href="reveal.js/css/reset.css">
+    <link rel="stylesheet" href="reveal.js/css/main.css">
+    <link rel="stylesheet" href="reveal.js/css/print.css" type="text/css" media="print">
+    <link rel="stylesheet" href="reveal.js/lib/css/zenburn.css">
+
     <script src="http://js.pusher.com/1.12/pusher.min.js"></script>
     <script type="text/javascript">
     var pusher = new Pusher('81ce7cb18d5019fbe99c');
@@ -44,7 +50,7 @@
 
   <body>
 
-    <div id="reveal">
+    <div class="reveal">
 
       <!-- Used to fade in a background when a specific slide state is reached -->
       <div class="state-background"></div>
@@ -159,30 +165,52 @@
 
     </div>
 
-    <script src="js/revealjs/reveal.min.js"></script>
-
     <!-- Optional libraries for code syntax highlighting and classList support in IE9 -->
-    <script src="js/revealjs/lib/highlight.js"></script>
-    <script src="js/revealjs/lib/classList.js"></script>
+    <script src="reveal.js/lib/js/head.min.js"></script>
 
     <script>
-      // Parse the query string into a key/value object
-      var query = {};
-      location.search.replace( /[A-Z0-9]+?=(\w*)/gi, function(a) {
-        query[ a.split( '=' ).shift() ] = a.split( '=' ).pop();
+      // Load the main reveal.js script
+      head.js( 'reveal.js/js/reveal.js', function() {
+        // Parse the query string into a key/value object
+        var query = {};
+
+        location.search.replace( /[A-Z0-9]+?=(\w*)/gi, function(a) {
+          query[ a.split( '=' ).shift() ] = a.split( '=' ).pop();
+        } );
+
+        Reveal.initialize({
+          // Display controls in the bottom right corner
+          controls: true,
+
+          // Display a presentation progress bar
+          progress: true,
+
+          // If true; each slide will be pushed to the browser history
+          history: true,
+
+          // Loops the presentation, defaults to false
+          loop: false,
+
+          // Flags if mouse wheel navigation should be enabled
+          mouseWheel: true,
+
+          // Apply a 3D roll to links on hover
+          rollingLinks: true,
+
+          // UI style
+          theme: query.theme || 'default', // default/neon/beige
+
+          // Transition style
+          transition: query.transition || 'default' // default/cube/page/concave/linear(2d)
+        });
       } );
 
-      Reveal.initialize({
-        controls: true,
-        progress: true,
-        history: true,
-        mouseWheel: true,
-        rollingLinks: true,
-        theme: query.theme || 'default', // default/neon
-        transition: query.transition || 'default' // default/cube/page/concave/linear(2d)
-      });
-
-      hljs.initHighlightingOnLoad();
+      // Load third party scripts
+      head.js( 'reveal.js/lib/js/classList.js' );
+      head.js( 'reveal.js/lib/js/highlight.js', function() {
+        // Fire off syntax highlighting for potential code samples in the slides
+        hljs.initHighlightingOnLoad();
+      } );
     </script>
 
   </body>
