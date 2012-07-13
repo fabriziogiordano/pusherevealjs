@@ -1,0 +1,34 @@
+#!/usr/bin/php -q
+<?php
+require('Pusher.php');
+
+switch ($argv[1]) {
+	case 'prev': case 'p':
+		$event = 'prev';
+	break;
+
+	case 'next': case 'n':
+		$event = 'next';
+	break;
+
+	case 'down': case 'd':
+		$event = 'down';
+	break;
+
+	case 'up': case 'u':
+		$event = 'up';
+	break;
+	
+	default:
+		$event = $argv[1];
+	break;
+}
+$key = '81ce7cb18d5019fbe99c';
+$secret = '6b40a9a5d840e47b4bbe';
+$app_id = '1955';
+
+$pusher = new Pusher($key, $secret, $app_id);
+$result = $pusher->trigger('ppt-channel', 'event-page', $event);
+
+var_dump($result);
+?>
